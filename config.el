@@ -109,3 +109,8 @@
                 '(("d" "Daily Journal Entry" entry
                    (file+headline (lambda () (get-journal-file-today)) "Journal")
                    "* %U %?\n%i\n" :prepend t)))))
+
+(after! lsp-mode
+  (setq lsp-file-watch-threshold t
+        lsp-enable-file-watchers t
+        lsp-auto-guess-root t))
