@@ -101,6 +101,8 @@
        lookup              ; navigate your code and its documentation
        llm               ; when I said you needed friends, I didn't mean...
        (lsp)      ; LSP Mode
+       ;;llm               ; when I said you needed friends, I didn't mean...
+       (lsp)      ; M-x lsp-mode
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -112,7 +114,7 @@
 
        :os
        (:if (featurep :system 'macos) macos)  ; improve compatibility with macOS
-       ;;tty               ; improve the terminal Emacs experience
+       tty               ; improve the terminal Emacs experience
 
        :lang
        ;;ada               ; In strong typing we (blindly) trust

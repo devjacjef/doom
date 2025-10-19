@@ -116,3 +116,8 @@
                    :host "localhost:11434"
                    :stream t
                    :models '(gemma3:4b))))
+
+(after! lsp-mode
+  (setq lsp-file-watch-threshold t
+        lsp-enable-file-watchers t
+        lsp-auto-guess-root t))
