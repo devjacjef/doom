@@ -109,3 +109,10 @@
                 '(("d" "Daily Journal Entry" entry
                    (file+headline (lambda () (get-journal-file-today)) "Journal")
                    "* %U %?\n%i\n" :prepend t)))))
+(after! gptel
+  (setq
+   gptel-model 'gemma3:4b
+   gptel-backend (gptel-make-ollama "Ollama"
+                   :host "localhost:11434"
+                   :stream t
+                   :models '(gemma3:4b))))
