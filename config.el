@@ -115,7 +115,7 @@
    gptel-backend (gptel-make-ollama "Ollama"
                    :host "localhost:11434"
                    :stream t
-                   :models '(gemma3:4b))))
+                   :models '(gemma3:1b))))
 
 (after! lsp-mode
   (setq lsp-file-watch-threshold t
