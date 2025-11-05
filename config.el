@@ -109,15 +109,20 @@
                 '(("d" "Daily Journal Entry" entry
                    (file+headline (lambda () (get-journal-file-today)) "Journal")
                    "* %U %?\n%i\n" :prepend t)))))
+
 (after! gptel
   (setq
-   gptel-model 'gemma3:4b
+   gptel-model 'gemma3:1b
    gptel-backend (gptel-make-ollama "Ollama"
                    :host "localhost:11434"
                    :stream t
                    :models '(gemma3:1b))))
 
 (after! lsp-mode
-  (setq lsp-file-watch-threshold t
-        lsp-enable-file-watchers t
+  (setq lsp-enable-file-watchers t
         lsp-auto-guess-root t))
+
+(map! :after lsp-mode
+      :map lsp-mode-map
+      :leader
+      "l" #'lsp-format-buffer)
